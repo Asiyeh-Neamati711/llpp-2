@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title><br>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+
+        /* General Styles */
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+        
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+    text-decoration: underline
+    
+    
+        }
+
+        h2, h3, h4 {
+            font-weight: 600;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .text-center {
+            color: #495057;
+        }
+
+        /* Styling the book list */
+        .list-group-item {
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+            font-weight: 400;
+            color: #495057;
+        }
+
+        .list-group-item:hover {
+            background-color: #e9ecef;
+        }
+
+        .list-group-item.selected {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+
+        /* Input Fields */
+        input[type="text"] {
+            border-radius: 6px;
+            border: 1px solid #ced4da;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        /* Message styling */
+        #message {
+            font-size: 16px;
+            font-weight: 500;
+            color: #ff6b6b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f8f9fa;
+            padding: 15px;
+            font-size: 14px;
+            color: #495057;
+        }
+    </style>
+</head>
+
+<body>
+        
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #758597;">
+        <a class="navbar-brand text-white" href="index.html">Library System</a>
+        <div class="notification-container">
+            <button class="notification-button">
+                <span class="icon">🔔</span>
+                <span class="badge">3</span>
+            </button>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    
+                    <a class="nav-link text-white" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="catalog.html">Catalog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="admin.html">Admin Panel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="register.html">Register</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="search.html">Search </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="text-center">Library Management System</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Available Books</h3>
+                <ul id="book-list" class="list-group">
+                    <!-- List of Books will be generated here -->
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>User Account</h3>
+                <input type="text" id="user-name" class="form-control" placeholder="Enter your name" />
+                <button id="borrow-books" class="btn btn-primary mt-2">Borrow Selected Books</button>
+                <button id="return-books" class="btn btn-danger mt-2">Return Selected Books</button>
+                <h4 class="mt-4">My Borrowed Books</h4>
+                <ul id="user-books" class="list-group">
+                    <!-- User borrowed books will be listed here -->
+                </ul>
+                <p id="message" class="mt-3"></p>
+            </div>
+        </div>
+    </div>
+
+   
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Library Management System. All rights reserved.</p>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>
